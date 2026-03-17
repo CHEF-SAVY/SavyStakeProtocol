@@ -1,0 +1,136 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  background: rgba(6, 6, 8, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1c1c28;
+}
+
+.nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f0a50030, #d4cfc420, #f0a50030, transparent);
+}
+
+.leftBrace, .rightBrace {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, transparent, #f0a50040, transparent);
+}
+.leftBrace { left: 0; }
+.rightBrace { right: 0; }
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.logoWings {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wing {
+  color: #f0a50060;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.logoCore {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logoText {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  color: #ede8dc;
+}
+
+.logoDivider {
+  font-size: 8px;
+  color: #f0a500;
+  filter: drop-shadow(0 0 4px #f0a500);
+}
+
+.logoSub {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: #3a3730;
+  text-transform: uppercase;
+  padding-left: 2px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #3a3730;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.link:hover { color: #d4cfc4; }
+
+.link.active { color: #ede8dc; }
+
+.link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -22px;
+  left: 0; right: 0;
+  height: 1px;
+  background: #f0a500;
+  box-shadow: 0 0 6px #f0a500;
+}
+
+.activeMark {
+  font-size: 8px;
+  color: #f0a500;
+  filter: drop-shadow(0 0 3px #f0a500);
+}
+
+.connectWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.backBtn {
+  background: transparent;
+  border: none;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: #3a3730;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.backBtn:hover {
+  color: #f0a500;
+}

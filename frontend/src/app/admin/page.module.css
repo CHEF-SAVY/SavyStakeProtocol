@@ -1,0 +1,284 @@
+.main {
+  position: relative;
+  z-index: 1;
+  padding: 80px 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #f0a50070;
+  letter-spacing: 0.2em;
+  margin-bottom: 6px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #1c1c28;
+}
+
+.pageTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.08em;
+  color: #ede8dc;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.pageSub {
+  font-size: 14px;
+  color: #6e6a5e;
+  letter-spacing: 0.04em;
+}
+
+.accessBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #ff2d7a08;
+  border: 1px solid #ff2d7a20;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #ff2d7a;
+  letter-spacing: 0.15em;
+}
+
+.accessDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff2d7a;
+  box-shadow: 0 0 6px #ff2d7a;
+  animation: flicker 4s infinite;
+}
+
+.warningBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #ff2d7a06;
+  border: 1px solid #ff2d7a15;
+  border-left: 2px solid #ff2d7a40;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #6e6a5e;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.warningGlyph {
+  color: #ff2d7a;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1px;
+  background: #1c1c28;
+  align-items: start;
+}
+
+.leftCol, .rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #1c1c28;
+}
+
+.section {
+  background: #0a0a0e;
+  padding: 1.5rem;
+}
+
+.sectionHeader {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #1c1c28;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  color: #ede8dc;
+  margin-bottom: 6px;
+}
+
+.sectionSub {
+  font-size: 12px;
+  color: #6e6a5e;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.poolsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #1c1c28;
+}
+
+.poolRow {
+  background: #060608;
+  border-left: 2px solid var(--pool-color);
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.poolInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.poolTop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.poolCode {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.poolApr {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+.poolMeta {
+  font-size: 12px;
+  color: #6e6a5e;
+  letter-spacing: 0.04em;
+}
+
+.poolRate {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #3a3730;
+  letter-spacing: 0.08em;
+}
+
+.poolEdit {
+  display: flex;
+  gap: 1px;
+  background: #1c1c28;
+}
+
+.rateInput {
+  background: #0e0e14;
+  border: none;
+  padding: 8px 12px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #d4cfc4;
+  width: 160px;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.rateInput:focus { background: #13131e; }
+.rateInput::placeholder { color: #2a2a3a; }
+
+.updateBtn {
+  padding: 8px 16px;
+  background: #0e0e14;
+  border: none;
+  border-left: 1px solid;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.updateBtn:hover { background: #13131e; }
+
+.statsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #1c1c28;
+}
+
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  background: #060608;
+  padding: 10px 12px;
+}
+
+.statLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.statLabel {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #6e6a5e;
+  letter-spacing: 0.1em;
+}
+
+.statValue {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #d4cfc4;
+}
+
+.addrList {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #1c1c28;
+}
+
+.addrRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #060608;
+}
+
+.addrLabel {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #3a3730;
+  letter-spacing: 0.12em;
+}
+
+.addrValue {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #6e6a5e;
+}

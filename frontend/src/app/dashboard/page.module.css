@@ -1,0 +1,522 @@
+.main {
+  position: relative;
+  z-index: 1;
+  padding: 80px 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pageBorder {
+  position: fixed;
+  top: 60px; left: 0;
+  width: 2px; height: 100vh;
+  background: linear-gradient(180deg, transparent, #f0a50020, transparent);
+  pointer-events: none;
+}
+
+.breadcrumb {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #f0a50070;
+  letter-spacing: 0.2em;
+  margin-bottom: 6px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #1c1c28;
+}
+
+.pageTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.08em;
+  color: #ede8dc;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.pageSub {
+  font-size: 14px;
+  color: #6e6a5e;
+  letter-spacing: 0.04em;
+}
+
+.statusPanel {
+  background: #0e0e14;
+  border: 1px solid #1c1c28;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.statusLabel {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #3a3730;
+  letter-spacing: 0.15em;
+}
+
+.statusValue {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  color: #d4cfc4;
+}
+
+.sectorLabel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #3a3730;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.sectorLine {
+  flex: 1;
+  height: 1px;
+  background: #1c1c28;
+}
+
+.poolsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #1c1c28;
+  border: 1px solid #1c1c28;
+  margin-bottom: 2.5rem;
+}
+
+.poolCard {
+  background: #0a0a0e;
+  padding: 1.5rem;
+  text-align: left;
+  transition: background 0.2s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.poolCard:hover { background: #0d0d14; }
+
+.poolSelected {
+  background: #0e0e18 !important;
+  outline: 1px solid var(--pool-color);
+  outline-offset: -1px;
+}
+
+.poolHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.poolThreat {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.selectedTag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: #f0a500;
+  letter-spacing: 0.1em;
+}
+
+.poolCode {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #3a3730;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.poolApr {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 1rem;
+}
+
+.aprLabel {
+  font-size: 14px;
+  color: #6e6a5e;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.poolStats {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #6e6a5e;
+}
+
+.poolStatRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.poolGlowLine {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.poolCard:hover .poolGlowLine,
+.poolSelected .poolGlowLine {
+  opacity: 0.6;
+}
+
+.deployPanel {
+  background: #0a0a0e;
+  border: 1px solid #1c1c28;
+  padding: 2rem;
+  animation: slideUp 0.3s ease;
+  position: relative;
+}
+
+.deployPanel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f0a50040, transparent);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.deployHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #1c1c28;
+}
+
+.deployTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+  color: #ede8dc;
+}
+
+.lockTag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #6e6a5e;
+  background: #0e0e14;
+  border: 1px solid #1c1c28;
+  padding: 8px 16px;
+  letter-spacing: 0.1em;
+}
+
+.deployForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputLabel {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #3a3730;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  background: #060608;
+  border: 1px solid #1c1c28;
+  padding: 0 1rem;
+  transition: border-color 0.2s;
+}
+
+.inputWrapper:focus-within { border-color: #2a2a3a; }
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 14px 0;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 24px;
+  color: #ede8dc;
+}
+
+.input::placeholder { color: #2a2a3a; }
+
+.inputToken {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #6e6a5e;
+  margin: 0 10px;
+}
+
+.maxBtn {
+  background: #1c1c28;
+  border: none;
+  padding: 5px 12px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #6e6a5e;
+  transition: all 0.2s;
+}
+
+.maxBtn:hover {
+  background: #2a2a3a;
+  color: #d4cfc4;
+}
+
+.missionBriefing {
+  background: #060608;
+  border: 1px solid #1c1c28;
+  border-left: 2px solid #f0a50040;
+  padding: 1.25rem;
+}
+
+.briefingTitle {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #f0a50070;
+  margin-bottom: 1rem;
+}
+
+.briefingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #1c1c2850;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #6e6a5e;
+}
+
+.briefingRow:last-child { border-bottom: none; }
+.briefingRow span:last-child { color: #d4cfc4; }
+
+.deployBtns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #1c1c28;
+}
+
+.approveBtn, .stakeBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+
+.approveBtn {
+  background: #0e0e14;
+  color: #6e6a5e;
+}
+
+.approveBtn:hover {
+  background: #13131e;
+  color: #d4cfc4;
+}
+
+.stakeBtn {
+  background: var(--pool-color);
+  color: #060608;
+}
+
+.stakeBtn:hover {
+  filter: brightness(1.1);
+}
+
+.btnNum {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.btnSuccess {
+  background: #00f5a015 !important;
+  color: #00f5a0 !important;
+}
+
+.warningMsg {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #ff2d7a;
+  letter-spacing: 0.08em;
+  padding: 10px 14px;
+  background: #ff2d7a08;
+  border: 1px solid #ff2d7a20;
+}
+
+.successMsg {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #00f5a0;
+  letter-spacing: 0.08em;
+  padding: 10px 14px;
+  background: #00f5a008;
+  border: 1px solid #00f5a020;
+}
+
+.emptyHint {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  opacity: 0.4;
+}
+
+.emptyLine {
+  flex: 1;
+  height: 1px;
+  background: #1c1c28;
+}
+
+.emptyText {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #3a3730;
+  letter-spacing: 0.2em;
+  white-space: nowrap;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.successPanel {
+  background: #060608;
+  border: 1px solid #1c1c28;
+  border-left: 2px solid #00f5a0;
+  animation: slideUp 0.3s ease;
+}
+
+.successHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #1c1c28;
+}
+
+.successIcon {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  color: #00f5a0;
+}
+
+.successTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  color: #00f5a0;
+}
+
+.successDetails {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid #1c1c28;
+}
+
+.successRow {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #6e6a5e;
+  padding: 4px 0;
+}
+
+.successRow span:last-child {
+  color: #d4cfc4;
+}
+
+.successActions {
+  display: flex;
+  gap: 1px;
+  background: #1c1c28;
+}
+
+.successLink {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: #0a0a0e;
+  border: none;
+  border-top: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  transition: background 0.2s;
+  border: 1px solid transparent;
+}
+
+.successLink:hover { background: #0e0e14; }
+
+.stakeAgainBtn {
+  flex: 1;
+  padding: 12px;
+  background: #0a0a0e;
+  border: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  color: #3a3730;
+  transition: all 0.2s;
+}
+
+.stakeAgainBtn:hover {
+  background: #0e0e14;
+  color: #d4cfc4;
+}
